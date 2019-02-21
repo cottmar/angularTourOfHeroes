@@ -1,0 +1,26 @@
+# Angular
+* {{ }} are Angular's interpolation binding syntax.
+* ngOnInit is a lifecycle hook. Angular calls on ngOnInit shortly after creating a component. Good place for initialization logic. 
+* - Use ngOnInit for two main reasons: 1. to perform complex initializations shortly after construction and 2. to set up the component after Angularsets the input properties
+* ngModel is Angular's two-way binding syntax. 
+* The most important @NgModule decorator anootates the top-level AppModule class. 
+* *ngFor is Angular's repeater directive. It repeats the host element for each element in a list
+* @Injectable() services - This marks the class as one that participates in the dependency injection system. It can have its own injected dependencies but will also provide an injectable service. 
+* The @Injectable() decorator accepts a metadata object for the service the same way the @Component() decorator does for component classes
+* Injector is the object that is responsible for choosing and injecting the provider where it is required. 
+* Providers - A provider is something that can create or deliver a service. It can instantiate a class to provide the service. 
+* When providedIn() is at root level, Angular creates a single, shared instance of the class and injects it into any class that asks for it. Registering the provider in the @INjectable metadata also allows angular to optimize an app by removing the service if it turns out not to be used after all. 
+* Fetching data from a remote server is asynchronous -- you should not do anything in the constructor (such as wiring constructor parameters to properties)
+* Observable.subscribe() is the critical difference. Using observables waits for the Observable to emit the arrays, which could happen now or several minutes from now. Then subscribe passes the emitted array to the callback, which sets the component's heroes property. asynchronous approach. 
+* --flat puts the file in src/app instead of its own folder
+* --module=app tells the CLI to register it in the imports array of AppModule
+* Routing: a typical Angular Route has two properties: 1. path: a string that matches the url in the browser address bar and 2. component: the component that the router should create when navigating to this route. 
+* RouterModule.forRoot() - the method is called forRoot() because you can configure the router at the application's root level. The forRoot() method supplies the service providers and directives needed for routing, and performs the initial navigation based on the current browser URL. 
+* RouterOutlet is one of the router directives that became available to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule
+* *ngFor repeater creates as  many links as are in th component's array
+* ActivatedRoute holds information about the route to the instance. 
+* Location is an angular service for interacting with the browser. 
+* Route.snapshot is a static image of the route information shortly after the component was created
+* paramMap is a dictionary of route parameter values extracted from the URL. 
+* Route parameters are always strings. the javascript (+) operator converts the string to a number, which is what hero id should be
+
